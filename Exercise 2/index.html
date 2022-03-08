@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id ="foodList"><ul>
+
+<script>  
+
+//Dynamically display a list of food items and prices using HTML & JavaScript
+//Create a list of objects, each having a food name and its price
+//Loop over that list, dynamically create a new list item `<li></li>` with the food name inside, and append that item to an existing HTML `<ul></ul>` element
+
+        const foodList = [
+            {name: "grapes", 
+            price: 4.99,},
+            {name: "bananas",
+            price: 1.99,},
+            {name: "avacados",
+            price: 3.99,}
+        ]
+
+for (let obj of foodList) {
+        const item = document.createElement("li");
+    item.innerHTML=obj.name  
+        console.log(item)
+        const container = document.getElementById('foodList')
+        container.appendChild(item);
+          }
+    </script>
+</body>
+</html>
